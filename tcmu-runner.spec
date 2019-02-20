@@ -6,19 +6,13 @@
 %{?_without_rbd:%global _without_rbd -Dwith-rbd=false}
 
 # without glusterfs dependency
-# if you wish to exclude glfs handlers in RPM, use below command
-# rpmbuild -ta @PACKAGE_NAME@-@PACKAGE_VERSION@.tar.gz --without glfs
-%{?_without_glfs:%global _without_glfs -Dwith-glfs=false}
+%global _without_glfs -Dwith-glfs=false
 
 # without qcow dependency
-# if you wish to exclude qcow handlers in RPM, use below command
-# rpmbuild -ta @PACKAGE_NAME@-@PACKAGE_VERSION@.tar.gz --without qcow
-%{?_without_qcow:%global _without_qcow -Dwith-qcow=false}
+%global _without_qcow -Dwith-qcow=false
 
 # without zbc dependency
-# if you wish to exclude zbc handlers in RPM, use below command
-# rpmbuild -ta @PACKAGE_NAME@-@PACKAGE_VERSION@.tar.gz --without zbc
-%{?_without_zbc:%global _without_zbc -Dwith-zbc=false}
+%global _without_zbc -Dwith-zbc=false
 
 # without file backed optical dependency
 # if you wish to exclude fbo handlers in RPM, use below command
